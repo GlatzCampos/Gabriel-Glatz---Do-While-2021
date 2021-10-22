@@ -15,6 +15,7 @@ body {
 body {
   display: grid;
   place-items: center;
+  background: rgb(29, 29, 29);
 }
 
 main {
@@ -86,4 +87,12 @@ ul {
   gap: 0.5rem;
 
   justify-content: center;
+}
+
+li {
+  transition: all ease 0.3s;
+}
+
+ul li:hover {
+  transform: scale(1.1);
 }

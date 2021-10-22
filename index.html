@@ -10,42 +10,81 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Gabriel Glatz - Do While 2021</title>
+
 </head>
-<body>
-    <main>
-        <div class="container">
-            <div class="avatar">
-                <span>
-                    <img src="images/selo.svg" alt="Selo Rocketseat">
-                </span>
-                <img src="images/perfil.jpg" alt="Foto pessoal">
+    <body>
+        <main>
+            <div class="container">
+                <div class="avatar">
+                    <span>
+                        <img src="images/selo.svg" alt="Selo Rocketseat">
+                    </span>
+                    <img src="images/perfil.jpg" alt="Foto pessoal">
+                </div>
+
+                <h1>Gabriel Glatz</h1>
+                <a href="https://github.com/GlatzCampos" target="_blank">
+                <img src="images/github.svg" alt="ícone github">gabrielglatz</a>
+
+                <p>An instructor focused on helping people start programming for web</p>
+            
+                <ul id="socialLinks">
+                    <li class="youtube">
+                        <a href="https://www.youtube.com/maykbrito" target="_blank">
+                        <img src="images/youtube.svg" alt="ícone youtube"></a>
+                    </li>
+                    <li class="facebook">
+                        <a href="https://www.facebook.com/maykbrito" target="_blank">
+                            <img src="images/facebook.svg" alt="ícone facebook"></a>
+                    </li>
+                    <li class="instagram">
+                        <a href="https://www.instagram.com/maykbrito" target="_blank">
+                            <img src="images/instagram.svg" alt="ícone instagram"></a>
+                    </li>
+                    <li class="twitter">
+                        <a href="https://twitter.com/maykbrito" target="_blank">
+                        <img src="images/twitter.svg" alt="ícone twitter"></a>
+                    </li>
+                </ul>
             </div>
-
-            <h1>Gabriel Glatz</h1>
-            <a href="https://instagram.com/gabrielglatz">
-            <img src="images/github.svg" alt="ícone github">gabrielglatz</a>
-
-            <p>An instructor focused on helping people start programming for web</p>
+        </main>
         
-            <ul>
-                <li>
-                    <a href="https://www.youtube.com/channel/UCCtk7T-k1bgxiXVPRv20LWQ" target="_blank">
-                    <img src="images/youtube.svg" alt="ícone youtube"></a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/gabrielglatz" target="_blank">
-                    <img src="images/instagram.svg" alt="ícone instagram"></a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/profile.php?id=100014781461308" target="_blank">
-                    <img src="images/facebook.svg" alt="ícone facebook"></a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/CamposGlatz" target="_blank">
-                    <img src="images/twitter.svg" alt="ícone twitter"></a>
-                </li>
-            </ul>
-        </div>
-    </main>
-</body>
+        <script>
+        
+            /*function server para criar algo mas conseguindo 
+            escolher quando aparecer essa função*/
+
+            /*DOM = Document Object Model -> O DOM serve para
+            organização do html usando os elementos mapeados*/
+
+            /*
+                camelCase
+                PascalCase
+                snake-case
+            */
+
+            const linksSocialMedia = {
+            github: "GlatzCampos",
+            youtube: "channel/UCCtk7T-k1bgxiXVPRv20LWQ",
+            facebook: "profile.php?id=100014781461308",
+            instagram: "gabrielglatz",
+            twitter: "CamposGlatz"
+            }
+
+            function changeSocialMediaLinks(){
+
+                for(let li of socialLinks.children){
+                    const social = li.getAttribute('class')
+
+                    li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+                    
+                    //alert(li.children[0].href)
+                }
+
+            }
+            
+            changeSocialMediaLinks()
+        </script>
+    
+    </body>
 </html>
